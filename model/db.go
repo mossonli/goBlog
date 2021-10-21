@@ -15,7 +15,7 @@ func InitDb() {
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8mb4&parseTime=True&loc=Local",
 		utils.DbUser,utils.DbPassword, utils.DbHost, utils.DbPort, utils.DbName)
 	fmt.Println(dsn)
-	db, err := gorm.Open(utils.Db, dsn)
+	db, err = gorm.Open(utils.Db, dsn) // := 的声明方式是一个局部变量
 	if err != nil {
 		fmt.Printf("数据库连接错误请检查参数！%v/n", err)
 	}
@@ -34,5 +34,5 @@ func InitDb() {
 	// SetConnMaxLifetime sets the maximum amount of time a connection may be reused.
 	db.DB().SetConnMaxLifetime(10 * time.Second) // 不要大于框架的超时时间
 
-	db.Close()
+	//db.Close()
 }

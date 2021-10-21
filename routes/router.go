@@ -14,9 +14,9 @@ func InitRouter(){
 		// 用户模块的接口
 		router.POST("/user/add", v1.AddUser)
 		router.GET("/user/user_exist", v1.UserExist)
-		router.GET("/user/get_user_list", v1.GetUserList)
+		router.GET("/user/list", v1.GetUserList)
 		router.PUT("/user/edit/:id", v1.EditUser)
-		router.POST("/user/del/:id", v1.DelUser)
+		router.DELETE("/user/del/:id", v1.DelUser)
 		// 分类模块的接口
 		// 文章模块的接口
 	}
