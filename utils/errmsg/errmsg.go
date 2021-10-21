@@ -11,6 +11,8 @@ const (
 	ERROR_TOKNE_RUNTIME    = 1005
 	ERROR_TOKEN_WRONG      = 1006
 	ERROR_TOKEN_TYPE_WRONG = 1007
+
+	ERROR_CATENAME_USED = 2001
 )
 
 var codeMsg = map[int]string{
@@ -23,6 +25,7 @@ var codeMsg = map[int]string{
 	ERROR_TOKNE_RUNTIME:    "token已过期",
 	ERROR_TOKEN_WRONG:      "token不正确",
 	ERROR_TOKEN_TYPE_WRONG: "token格式错误",
+	ERROR_CATENAME_USED:	"分类已经存在",
 }
 
 func GetErrMsg(code int) string {

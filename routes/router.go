@@ -18,6 +18,10 @@ func InitRouter(){
 		router.PUT("/user/edit/:id", v1.EditUser)
 		router.DELETE("/user/del/:id", v1.DelUser)
 		// 分类模块的接口
+		router.POST("category/add", v1.AddCategory)
+		router.GET("category/list", v1.GetCategory)
+		router.PUT("category/edit/:id", v1.EditCategory)
+		router.DELETE("category/edit/:id", v1.DelCategory)
 		// 文章模块的接口
 	}
 
