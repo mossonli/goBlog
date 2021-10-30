@@ -1,0 +1,7 @@
+time="2021-10-30T14:01:55+08:00" level=info Agent="apifox/1.0.0 (https://www.apifox.cn)" DataSize=192 HostName=mossondeMBP Ip=127.0.0.1 Method=POST Path=/api/v1/user/login SpendTime="108 ms" Status=200
+time="2021-10-30T14:02:25+08:00" level=info Agent="apifox/1.0.0 (https://www.apifox.cn)" DataSize=40 HostName=mossondeMBP Ip=127.0.0.1 Method=POST Path=/api/v1/user/add SpendTime="1 ms" Status=200
+time="2021-10-30T14:04:13+08:00" level=info Agent="apifox/1.0.0 (https://www.apifox.cn)" DataSize=66 HostName=mossondeMBP Ip=127.0.0.1 Method=POST Path=/api/v1/user/add SpendTime="1 ms" Status=200
+s=200
+time="2021-10-30T14:01:11+08:00" level=info Agent="apifox/1.0.0 (https://www.apifox.cn)" DataSize=51 HostName=mossondeMBP Ip=127.0.0.1 Method=POST Path=/api/v1/user/login SpendTime="98 ms" Status=200
+time="2021-10-30T14:01:12+08:00" level=info Agent="apifox/1.0.0 (https://www.apifox.cn)" DataSize=51 HostName=mossondeMBP Ip=127.0.0.1 Method=POST Path=/api/v1/user/login SpendTime="110 ms" Status=200
+time="2021-10-30T14:01:13+08:00" level=info Agent="apifox/1.0.0 (https://www.apifox.cn)" DataSize=51 HostName=mossondeMBP Ip=127.0.0.1 Method=POST Path=/api/v1/user/login SpendTime="98 ms" Status=200

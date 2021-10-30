@@ -5,6 +5,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"goBlog/model"
 	"goBlog/utils/errmsg"
+	"goBlog/utils/validator"
 	"net/http"
 	"strconv"
 )
@@ -24,6 +25,16 @@ func UserExist(ctx *gin.Context){
 func AddUser(ctx *gin.Context){
 	var data model.User
 	_ = ctx.ShouldBindJSON(&data)
+	// 数据验证
+	msg, code := validator.Validate(&data)
+	if code != errmsg.SUCCESS{
+		ctx.JSON(http.StatusOK, gin.H{
+			"status": code,
+			"message": msg,
+		})
+		return
+	}
+
 	code = model.CheckUser(data.Username)
 	if code == errmsg.SUCCESS{
 		model.CreateUser(&data)
@@ -33,7 +44,6 @@ func AddUser(ctx *gin.Context){
 	}
 	ctx.JSON(http.StatusOK, gin.H{
 		"status":code,
-		"data": data,
 		"message":errmsg.GetErrMsg(code),
 	})
 
@@ -48,12 +58,13 @@ func GetUserList(ctx *gin.Context){
 	if pageNum == 0{
 		pageNum = -1
 	}
-	data := model.GetUserList(pageSize, pageNum)
+	data, total := model.GetUserList(pageSize, pageNum)
 	code = errmsg.SUCCESS
 	ctx.JSON(http.StatusOK, gin.H{
 		"status": code,
 		"data": data,
 		"message": errmsg.GetErrMsg(code),
+		"total": total,
 	})
 }
 
