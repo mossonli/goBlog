@@ -1,0 +1,24 @@
+{
+  "name": "vueadmin",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --mode dev",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "element-plus": "^1.1.0-beta.24",
+    "vue": "^3.2.6",
+    "vue-router": "^4.0.12",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.6.0",
+    "@vue/compiler-sfc": "^3.2.6",
+    "ant-design-vue": "^1.7.8",
+    "babel-plugin-import": "^1.13.3",
+    "sass": "^1.43.4",
+    "vite": "^2.5.2"
+  }
+}
