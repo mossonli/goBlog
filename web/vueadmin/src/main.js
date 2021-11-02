@@ -8,6 +8,7 @@ import 'element-plus/dist/index.css'
 // 跨域
 // import axios from 'axios'
 import request from './utils/request' // 在request里面封装了 axios 
+import storage from './utils/storage'
 import config from './config'
 
 // 引入路由
@@ -21,6 +22,7 @@ console.log("环境变==>", import.meta.env)
 const app = createApp(App)
 
 app.config.globalProperties.$request = request
+app.config.globalProperties.$storage = storage
 
 // axios.get(config.mockApi+'/v1/user/login').then((res)=>{
 //     console.log(res)
