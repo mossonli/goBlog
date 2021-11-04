@@ -9,11 +9,12 @@ import 'element-plus/dist/index.css'
 // import axios from 'axios'
 import request from './utils/request' // 在request里面封装了 axios 
 import storage from './utils/storage'
-import config from './config'
+import api from './api'
 
 // 引入路由
 import router from './router'
-
+// 引入存储
+import store from './store'
 
 
 
@@ -22,6 +23,7 @@ console.log("环境变==>", import.meta.env)
 const app = createApp(App)
 
 app.config.globalProperties.$request = request
+app.config.globalProperties.$api = api
 app.config.globalProperties.$storage = storage
 
 // axios.get(config.mockApi+'/v1/user/login').then((res)=>{
@@ -29,7 +31,7 @@ app.config.globalProperties.$storage = storage
 // })
 
 app.use(router)
-
+app.use(store)
 app.use(ElementPlus)
 
 app.mount('#app')

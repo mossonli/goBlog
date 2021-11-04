@@ -55,6 +55,9 @@ function request(options){
     if (options.method.toLower === 'get'){
         options.params = options.data
     }
+    if(typeof options.mock != 'undefined'){
+        config.mock = options.mock
+    }
 
     // 配置生产
     if(config.env === 'prod'){
